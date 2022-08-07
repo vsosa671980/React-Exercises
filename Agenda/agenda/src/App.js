@@ -1,5 +1,6 @@
 
 import { Button } from 'bootstrap';
+import { useState } from 'react';
 import './App.css';
 import { Agenda } from './Components/Agenda';
 import { Formulario } from './Components/Formulario';
@@ -19,10 +20,12 @@ function App() {
     
   ];
 
+  const [contacts, setContacts] = useState(contactos)
+
   return (
     <div className="container">
       <h2>Agenda</h2>
-      <Agenda contactos={contactos} />
+      <Agenda contactos={contacts} />
       <h2>Formulario</h2>
       <Formulario />
     
